@@ -25,11 +25,12 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api", function (req, res) {
-  console.log(req.rawHeaders);
+  const headers = req.headers;
+  console.log(req.ip);
   res.json({
-    ipaddress: req.rawHeaders[37],
-    language: req.rawHeaders[5],
-    software: req.rawHeaders[33],
+    ipaddress: headers[37],
+    language: headers[5],
+    software: headers[33],
   });
 });
 
