@@ -24,14 +24,13 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
 
-app.get("/api/whoami", function (req, res) {
+app.get("/api/hell", function (req, res) {
   const headers = req.headers;
-  console.log(req.headers);
-  console.log(req.rawHeaders);
+
   res.json({
-    ipaddress: headers[37],
-    language: headers[5],
-    software: headers[33],
+    ipaddress: headers["x-forwarded-for"],
+    language: headers["accept-language"],
+    software: headers["user-agent"],
   });
 });
 
