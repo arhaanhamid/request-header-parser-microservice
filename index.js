@@ -24,7 +24,7 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
 
-app.get("/api/whoami", function (req, res) {
+app.get("/api", function (req, res) {
   console.log(req.rawHeaders);
   res.json({
     ipaddress: req.rawHeaders[37],
