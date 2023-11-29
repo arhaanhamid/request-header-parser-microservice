@@ -24,9 +24,10 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
 
-app.get("/api", function (req, res) {
+app.get("/api/whoami", function (req, res) {
   const headers = req.headers;
-  console.log(req.ip);
+  console.log(req.headers);
+  console.log(req.rawHeaders);
   res.json({
     ipaddress: headers[37],
     language: headers[5],
