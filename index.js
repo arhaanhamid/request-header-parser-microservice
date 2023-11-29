@@ -27,9 +27,9 @@ app.get("/api/hello", function (req, res) {
 app.get("/api/whaomi", function (req, res) {
   console.log(req.rawHeaders);
   res.json({
-    ipaddress: req.rawHeaders[36],
+    ipaddress: req.rawHeaders[37],
     language: req.rawHeaders[5],
-    software: req.rawHeaders[32],
+    software: req.rawHeaders[33],
   });
 });
 
