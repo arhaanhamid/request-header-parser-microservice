@@ -24,7 +24,7 @@ app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
 
-app.get("/api/hell", function (req, res) {
+app.get("/api/:path", function (req, res) {
   const headers = req.headers;
 
   res.json({
